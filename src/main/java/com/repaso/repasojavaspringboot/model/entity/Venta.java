@@ -1,5 +1,7 @@
 package com.repaso.repasojavaspringboot.model.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -9,6 +11,7 @@ public class Venta implements Serializable {
 
     private long id;
     private Integer valor;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fecha;
     private String nombreVendedor;
     private String zona;
